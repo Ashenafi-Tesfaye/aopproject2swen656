@@ -1,0 +1,31 @@
+# Address Book Application
+
+## Overview
+This is an Address Book Application developed using Spring Boot. It allows users to manage their contacts and keep track of changes made to them.
+
+## Features
+- Add, update, and delete contacts.
+- Retrieve all contacts or a specific contact by ID.
+- Track changes made to contacts.
+
+## How to Run
+1. Ensure you have Java 8 or higher installed.
+2. Clone the repository.
+3. Navigate to the project directory and run the application using the command `./mvnw spring-boot:run`.
+
+## API Endpoints
+- `GET /api/contacts`: Retrieve all contacts.
+- `GET /api/contacts/{id}`: Retrieve a specific contact by ID.
+- `POST /api/contacts`: Add a new contact.
+- `PUT /api/contacts/{id}`: Update a specific contact.
+- `DELETE /api/contacts/{id}`: Delete a specific contact.
+- `GET /history/contacts`: Retrieve contact history.
+
+## Database
+The application uses an in-memory H2 database. The console is accessible at `http://localhost:8080/h2-console`.
+
+## Contact
+For any issues or suggestions, please open an issue on GitHub.
+
+## License
+This project is open source 
