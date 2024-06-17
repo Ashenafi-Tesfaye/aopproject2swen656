@@ -19,11 +19,9 @@ import java.util.List;
 public class ContactController {
     
     
-    private final ContactService contactService;
+	@Autowired
+    private ContactService contactService;
 
-    public ContactController(ContactService contactService) {
-        this.contactService = contactService;
-    }
 
     @GetMapping
     public List<Contact> getAllContacts() {

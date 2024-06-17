@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact History</title>
+    <link rel="stylesheet" href="contacthistory.css">
+</head>
+<body>
+<div class="content-container">
+    <h1>Contact History</h1>
+
+    <div id="filters">
+        <label for="contactName">Contact Name:</label>
+        <input type="text" id="contactName" name="contactName" placeholder="Enter name (optional)">
+
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate" placeholder="YYYY-MM-DD (optional)">
+
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" name="endDate" placeholder="YYYY-MM-DD (optional)">
+
+        <label for="changeType">Change Type:</label>
+        <select id="changeType" name="changeType">
+            <option value="">All Changes</option>
+            <option value="ADD">Added</option>
+            <option value="UPDATED">Updated</option>
+            <option value="DELETED">Deleted</option>
+        </select>
+
+        <button id="filterButton">Filter</button>
+    </div>
+
+    <div>
+    <section id="main-page">
+        <a href="index.html">Get Back to Main Page</a>
+    </section>
+    </div>
+    <table id="history-table">
+        <thead>
+            <tr>
+                <th>Contact Name</th>
+                <th>Change Type</th>
+                <th>Change Details</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody id="history-body">
+            </tbody>
+    </table>
+
+    <script src="contacthistory.js"></script>
+
+       <footer>
+        <p>&copy; 2024 Address Book Beta - SWEN 656 Assignment</p>
+
+        <p>Images sourced from <a href="https://unsplash.com/s/photos/free-images" target="_blank">Unsplash's free images collection</a>.</p>
+
+    </footer>
+</div>
+</body>
+
+</html>

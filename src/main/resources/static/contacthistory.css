@@ -1,0 +1,103 @@
+body {
+    font-family: sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1583364493238-248032147fbd?q=80&w=1674&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+}
+
+.content-container {
+    background: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 5px; 
+}
+
+.content-container h1, .content-container p {
+    color: #333; 
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#filters {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+#filters label {
+    margin-right: 10px;
+    width: 120px;
+}
+
+#filters input, #filters select {
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 180px;
+}
+
+#filterButton {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff; 
+}
+
+table th, table td {
+    padding: 8px;
+    border: 2px solid #007bff; 
+    text-align: left;
+}
+
+table th {
+    background-color: #007bff; 
+    color: #fff;
+}
+
+#main-page a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#main-page a:hover {
+    background-color: #0056b3;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e7e7e7;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

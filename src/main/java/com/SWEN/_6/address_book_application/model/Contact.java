@@ -1,5 +1,7 @@
 package com.SWEN._6.address_book_application.model;
 
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -30,7 +32,11 @@ public class Contact {
 
     @Pattern(regexp = "\\d{3}-\\d{3}-\\d{4}", message = "Phone number must be in the format 123-456-7890")
     private String phone;
-
+    
+    private boolean deleted = false; 
+    private LocalDateTime deletedAt; 
+    
+    
 	public Long getId() {
 		return id;
 	}
@@ -86,6 +92,29 @@ public class Contact {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+	
+	public boolean isDeleted() {
+		return deleted;
+	}
+	
+	public void setDeleted(boolean deleted) {
+		this.deleted = deleted;
+	}
+	
+	public LocalDateTime getDeletedAt() {
+		return deletedAt;
+	}
+	
+	public void setDeletedAt(LocalDateTime deletedAt) {
+		this.deletedAt = deletedAt;
+	}
+
+	@Override
+	public String toString() {
+		return "Contact [id=" + id + ", name=" + name + ", street=" + street + ", city=" + city + ", state=" + state
+				+ ", zip=" + zip + ", phone=" + phone + ", deleted=" + deleted + ", deletedAt=" + deletedAt + "]";
+	}
     
+	
     
 }

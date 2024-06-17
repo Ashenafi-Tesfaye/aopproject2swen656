@@ -9,6 +9,7 @@
     </style>
 </head>
 <body>
+<div class="content-container">
     <header>
         <h1>Address Book Application</h1>
         <p>Welcome to the Address Book Beta Version!</p>
@@ -40,12 +41,13 @@
                 <label for="phone">Phone:</label>
                 <input type="tel" id="phone" name="phone" pattern="\d{3}-\d{3}-\d{4}" title="Phone number must be in the format 123-456-7890" required placeholder="Phone number format (123-456-7890)"><br>
 
-                <button type="submit">Add Contact</button>
+                <button type="submit" id="addContactButton">Add Contact</button>
             </form>
             <div id="addContactError" class="error"></div>
         </section>
         <section id="address-book">
             <table id="contacts-table">
+            <caption>Active Contacts</caption>
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -65,9 +67,9 @@
         </section>
 
         <section id="update-delete-section">
-            <div id="update-delete-nav">
+          <!--  <div id="update-delete-nav">
                 <h2>Update or Delete Contact</h2>
-            </div>
+            </div> -->
 
             <section id="update-contact" class="contact-form hidden">
                 <h3>Update Contact</h3>
@@ -108,11 +110,20 @@
                 </form>
                 <div id="deleteContactError" class="error"></div>
             </section>
+
+            <section id="contact-history">
+                <h3>Contact History</h3>
+                <a href="contacthistory.html">View Contact History</a>
+            </section>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2024 Address Book Beta - SWEN 656 Assignment</p>
+
+        <p>Images sourced from <a href="https://unsplash.com/s/photos/free-images" target="_blank">Unsplash's free images collection</a>.</p>
+
     </footer>
+  </div>
 </body>
 </html>
