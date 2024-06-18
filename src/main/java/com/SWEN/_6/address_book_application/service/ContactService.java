@@ -74,6 +74,21 @@ public class ContactService {
         if (!original.getName().equals(updated.getName())) {
             changes.append("Name changed from ").append(original.getName()).append(" to ").append(updated.getName()).append(". ");
         }
+        if (!original.getStreet().equals(updated.getStreet())) {
+            changes.append("Street changed from ").append(original.getStreet()).append(" to ").append(updated.getStreet()).append(". ");
+        }
+        if (!original.getCity().equals(updated.getCity())) {
+            changes.append("City changed from ").append(original.getCity()).append(" to ").append(updated.getCity()).append(". ");
+        }
+        if (!original.getState().equals(updated.getState())) {
+            changes.append("State changed from ").append(original.getState()).append(" to ").append(updated.getState()).append(". ");
+        }
+        if (!original.getZip().equals(updated.getZip())) {
+            changes.append("ZIP code changed from ").append(original.getZip()).append(" to ").append(updated.getZip()).append(". ");
+        }
+        if (!original.getPhone().equals(updated.getPhone())) {
+            changes.append("Phone number changed from ").append(original.getPhone()).append(" to ").append(updated.getPhone()).append(". ");
+        }
         return changes.toString().isEmpty() ? "No changes detected." : changes.toString();
     }
 }
