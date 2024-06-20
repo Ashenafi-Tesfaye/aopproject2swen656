@@ -7,18 +7,21 @@ import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Configuration;
 
 @Aspect
-@Component
+@Configuration
 public class ContactHistoryAspect {
 
-    @Autowired
     private ContactHistoryService contactHistoryService;
 
-    @Autowired
+   
     private ContactService contactService;
+    
+    public ContactHistoryAspect(ContactHistoryService contactHistoryService, ContactService contactService) {
+        this.contactHistoryService = contactHistoryService;
+        this.contactService = contactService;
+    }
 
     private Contact originalContact;
 
