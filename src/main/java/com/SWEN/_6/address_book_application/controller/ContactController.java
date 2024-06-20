@@ -40,9 +40,10 @@ public class ContactController {
             List<String> errors = bindingResult.getFieldErrors().stream()
                     .map(error -> error.getField() + ": " + error.getDefaultMessage())
                     .collect(Collectors.toList());
-            return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
+            return ResponseEntity.badRequest().body(errors);
         }
-        return new ResponseEntity<>(contactService.addContact(contact), HttpStatus.CREATED);
+        Contact addedContact = contactService.addContact(contact);
+        return ResponseEntity.status(HttpStatus.CREATED).body(addedContact);
     }
 
     @PutMapping("/{id}")
